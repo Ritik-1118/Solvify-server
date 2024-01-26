@@ -31,9 +31,9 @@ app.get("/", (req,res)=>{
 })
 
 app.use(errorMiddleware);
-connectDb().then(()=>{
-    const PORT = 8000;
-    app.listen(PORT,()=>{
-        console.log(`Server running at http://localhost:${PORT}`);
-    });
+connectDb()
+
+const PORT = 8000;
+app.listen(PORT,()=>{
+    console.log(`Server running at http://localhost:${PORT}`);
 });
